@@ -14,7 +14,7 @@ Dz = Client(
     "Dz",
     bot_token = os.environ.get("BOT_TOKEN", "6381483867:AAEAT3PbP7h5cejrgyb8e6wKP3gO0KshmvQ"),
     api_id = int(os.environ.get("API_ID", "29855436")),
-    api_hash = os.environ.get("API_HASH", "c01b59b1d686c55d60a92c171e2b19fe",
+    api_hash = os.environ.get("API_HASH", "c01b59b1d686c55d60a92c171e2b19fe"),
 )
 
 
@@ -31,9 +31,10 @@ async def start(bot, message):
       [
        InlineKeyboardButton("Tutup", callback_data="close"),
       ]])
-    await messages.reply_photo(
-        photo=random.choice(PHOTO_LINK),
-        text="Hello {message.from_user.mention}   Bro Sugamano",
+    mention = message.from_user.mention
+    await message.reply_text(
+        #photo=random.choice(PHOTO_LINK),
+        text=f"Hallo {mention}\n\nSaya Adalah DzStore",
         reply_markup=buttons
     )
 
