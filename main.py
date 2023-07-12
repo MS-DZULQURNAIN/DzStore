@@ -20,24 +20,29 @@ Dz = Client(
 
 @Dz.on_message(filters.command("start")) 
 async def start(bot, message):
-    buttons = [[
-      InlineKeyboardButton("Mo Tech YT", callback_data="start")
+    buttons = InlineKeyboardMarkup([
+      [
+       InlineKeyboardButton("OWNER", URL=f"tg://userid?{OWNER}"),
+      ],
+      [
+      InlineKeyboardButton("Mo Tech YT", callback_data="menu")
       ]]
     await messages.reply_photo(
         photo=random.choice(PHOTO_LINK),
         text="Hello {message.from_user.mention}   Bro Sugamano",
-        reply_markup=InlineKeyboardMarkup(buttons)
+        reply_markup=buttons
     )
 
 
 
-@Muhammad.on_callback_query()
-async def callback(bot, msg: CallbackQuery)
-    if msg.data == "start":
-        await message.message.edit(
-            text=" hello {msg.from_user.mention}  Start Text"
+@Dz.on_callback_query()
+async def callback(bot, msg: CallbackQuery):
+    if msg.data == "menu":
+        mention = msg.from_user.mention
+        await msg.edit_inline_text(
+            text=f"hello {mention}  Start Text"
         )
 
 
-
- Muhammed.run()
+print("AKTIF🔥")
+Dz.run()
