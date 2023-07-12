@@ -22,11 +22,15 @@ Dz = Client(
 async def start(bot, message):
     buttons = InlineKeyboardMarkup([
       [
-       InlineKeyboardButton("OWNER", URL=f"tg://userid?{OWNER}"),
+       InlineKeyboardButton("OWNER", url=f"tg://userid?{OWNER}"),
       ],
       [
-      InlineKeyboardButton("Mo Tech YT", callback_data="menu")
-      ]]
+       InlineKeyboardButton("Menu", callback_data="menu"),
+       InlineKeyboardButton("Help", callback_data="help"),
+      ]
+      [
+       InlineKeyboardButton("Tutup", callback_data="close"),
+      ]])
     await messages.reply_photo(
         photo=random.choice(PHOTO_LINK),
         text="Hello {message.from_user.mention}   Bro Sugamano",
