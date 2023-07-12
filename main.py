@@ -1,25 +1,26 @@
 from pyrogram import Client, filter
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton 
 from pyrogram.types import CallbackQuery
-import randam
+# mport randam
 import os
 
+"""
 PHOTO_LINK = [
  "Photo Link",
  "photo Link"
- ]
+ ]"""
 
-Muhammed = Client(
-    "Pyrogram Bot",
-    bot_token = os.environ["BOT_TOKEN"],
-    api_id = int(os.environ["API_ID"]),
-    api_hash = os.environ["API_HASH"],
+Dz = Client(
+    "Dz",
+    bot_token = os.environ.get("BOT_TOKEN", "6381483867:AAEAT3PbP7h5cejrgyb8e6wKP3gO0KshmvQ"),
+    api_id = int(os.environ.get("API_ID", "29855436")),
+    api_hash = os.environ.get("API_HASH", "c01b59b1d686c55d60a92c171e2b19fe",
 )
 
 
-@Muhammed.on_message(filters.command("start")) 
-async def start_message(bot, message)
-    button = [[
+@Dz.on_message(filters.command("start")) 
+async def start(bot, message):
+    buttons = [[
       InlineKeyboardButton("Mo Tech YT", callback_data="start")
       ]]
     await messages.reply_photo(
