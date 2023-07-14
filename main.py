@@ -4,7 +4,7 @@ from pyrogram.types import CallbackQuery
 # mport randam
 import os
 
-OWNER = [1814359323]
+OWNER = 1814359323
 
 """
 PHOTO_LINK = [
@@ -24,7 +24,7 @@ Dz = Client(
 async def start(bot, message):
     buttons = InlineKeyboardMarkup([
       [
-       InlineKeyboardButton("OWNER", url=f"tg://userid?{OWNER}"),
+       InlineKeyboardButton("OWNER", url=f"tg://user?id={OWNER}"),
       ],
       [
        InlineKeyboardButton("Menu", callback_data="menu"),
@@ -36,48 +36,10 @@ async def start(bot, message):
     mention = message.from_user.mention
     await message.reply_text(
         #photo=random.choice(PHOTO_LINK),
-        text=f"Hallo {mention}\n\nSaya Adalah DzStore tempat jajan telegram atau jajanan lain nya, silahkan pilih menu untuk menelusuri nya",
-        reply_markup=buttons
-    )
-
-
-
-@Dz.on_callback_query()
-async def callback(bot, msg: CallbackQuery):
-    if msg.data == "menu":
-        mention = msg.from_user.mention
-        buttons = InlineKeyboardMarkup([
-                              [
-                                   InlineKeyboardButton("NOKOS", callback_data="nokos"),
-                              ], 
-                              [    
-                                   InlineKeyboardButton("kembali", callback_data="home"),
-                              ]])
-        await msg.edit_inline_text(
-            text=f"Halo {mention}\nMau jajan apa nih?",
-            reply_markup=buttons
-        )
-    if msg.data == "nokos":
-     buttons = InlineKeyboardMarkup([
-                            [
-                               InlineKeyboardButton("Admin", url=f"tg://userid?{OWNER}"),
-                               InlineKeyboardButton("info...", url="t.me/DezetStore"),
-                            ],
-                            [
-                               InlineKeyboardButton("kembali", callback_data="menu"),
-                            ],
-                       ])
-     await msg.edit_inline_text(
-      text="""
-      NOKOS TELEGRAM ✅
-      ID 1 Rp 40.000🇮🇩
-      ID 2 Rp 35.000🇮🇩
-      ID 8 / 9 PC ONLY
-      ID FRESH 5 / 6 Rp 5.000🇮🇩
-
-      Note:Tanyakan stock sebelum pay
-      """, reply_markup=buttons)
-
+        text=f"**Hallo {mention}\n\nSaya Adalah DzStore tempat jajan telegram atau jajanan lain nya, silahkan pilih menu untuk menelusuri nya**",
+        reply_markup=buttons,
+        disable_web_page_preview=True
+ )
 
 print("AKTIF🔥")
 Dz.run()
