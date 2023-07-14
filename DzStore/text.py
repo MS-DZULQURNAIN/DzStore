@@ -48,7 +48,7 @@ Metode pembayaran❎
 ***
 """
 
-NOKOS_FRESH = """
+NOKOS_3 = """
 ```
 #BELI_NOKOS_TELEGRAM
 
@@ -61,6 +61,56 @@ Metode pembayaran❎
 ***
 """
 
-NOKOS_PAY = "**Silahkan pilih metode pembayaran yang diinginkan**"
+NOKOS_DANA1 = """
+```
+#BELI_NOKOS_TELEGRAM
 
-NOKOS_PAY1 = """
+Jenis Nokos id = 1
+Harga Nokos = Rp 40.000
+Pembayaran = Dana 082137969411
+```
+Pilih jenis nokos✅
+Metode pembayaran✅
+***
+"""
+
+NOKOS_DANA2 = """
+```
+#BELI_NOKOS_TELEGRAM
+
+Jenis Nokos id = 2
+Harga Nokos = Rp 35.000
+Pembayaran = Dana 082137969411
+```
+Pilih jenis nokos✅
+Metode pembayaran✅
+***
+"""
+
+NOKOS_DANA3 = """
+```
+#BELI_NOKOS_TELEGRAM
+
+Jenis Nokos id = Fresh 5/6
+Harga Nokos = Rp 5.000
+Pembayaran = Dana 082137969411
+```
+Pilih jenis nokos✅
+Metode pembayaran✅
+***
+"""
+
+NOKOS_CONF_DANA1 = """
+```
+#BELI_NOKOS_TELEGRAM
+
+Jenis Nokos id = 1
+Harga Nokos = Rp 40.000
+Pembayaran = Dana 082137969411
+```
+Kirimkan Bukti pembayaran disini dengan
+Caption text diatas (tap auto copy)
+Contoh : [Disini](https://t.me/DezetStore)
+Tunggu Konfirmasi Admin sampai admin chat ya
+***
+"""
