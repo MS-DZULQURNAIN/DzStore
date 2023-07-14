@@ -10,7 +10,7 @@ Untuk membeli silahkan klik
 tombol beli dibawah ini⚠**
 """
 
-NOKOS_SET = """
+NOKOS_DEFAULT = """
 ```
 #BELI_NOKOS_TELEGRAM
 
@@ -18,11 +18,9 @@ Jenis Nokos id = ...
 Harga Nokos = ...
 Pembayaran = ... 
 ```
-Pilih jenis dan
-metode pembayaran✅
+Pilih jenis nokos❎
+Metode pembayaran❎
 """
-
-NOKOS_JENIS = "**Silahkan pilih jenis nokos yang di inginkan**"
 
 NOKOS1 = """
 ```
@@ -32,7 +30,8 @@ Jenis Nokos id = 1
 Harga Nokos = Rp 40.000
 Pembayaran = ... 
 ```
-Pilih metode pembayaran✅
+Pilih jenis nokos✅
+Metode pembayaran❎
 ***
 """
 
@@ -44,7 +43,8 @@ Jenis Nokos id = 2
 Harga Nokos = Rp 35.000
 Pembayaran = ... 
 ```
-Pilih metode pembayaran✅
+Pilih jenis nokos✅
+Metode pembayaran❎
 ***
 """
 
@@ -52,11 +52,12 @@ NOKOS_FRESH = """
 ```
 #BELI_NOKOS_TELEGRAM
 
-Jenis Nokos id = FRESH 5/6
+Jenis Nokos id = Fresh 5/6
 Harga Nokos = Rp 5.000
 Pembayaran = ... 
 ```
-Pilih metode pembayaran✅
+Pilih jenis nokos✅
+Metode pembayaran❎
 ***
 """
 
