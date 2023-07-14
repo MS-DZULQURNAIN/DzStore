@@ -1,10 +1,10 @@
 from pymongo import MongoClient
 
 # Menghubungkan ke MongoDB
-client = MongoClient("mongodb://localhost:27017/")
+client = MongoClient("mongodb+srv://avel:tmp0@aveltmp.nqyqy6h.mongodb.net/aveltmp?retryWrites=true&w=majority:27017/")
 
 # Memilih database
-db = client["nama_database"]
+db = client["DzStore"]
 
 def add_topup(user_id, amount):
     collection = db["topup"]
